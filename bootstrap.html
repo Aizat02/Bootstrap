@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+        <!--1-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Profile</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--2 Page container-->
+<div class="container mt-5">
+
+<!--3 Alert-->
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    Profile updated successully
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  <!--4 Heading-->
+    <h2 class="mb-4"> Profile Settings</h2>
+
+    <!--Form-->
+    <form>
+        <div class="mb-3">
+             <label for="name" class="form-label">Full Name</label>
+             <input type="text" class="form-control" id="name" placeholder="John Doe"/>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com"/>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">New Password</label>
+            <input type="password" class="form-control" id="password"/>
+        </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="#confirmModal">Save Changes</button>
+    </form>
+</div>  
+    
+    <!--Modal-->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModallabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModallabel">Condirm Changes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to save your profile changes?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" onclick="showToast()">Yes,Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Toast-->
+        <div class=" position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="saveToast" class="toast align-items-center text-white bg-success border-0" role="alert" >
+                 <div class="d-flex">
+                    <div class="toast-body">Changes saved successfully!</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                 </div>
+            </div>
+        </div>
+        <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>
+        function showToast(){
+             const toast= new bootsrtap.Toast(document.getElementById('saveToast'));
+            toast.show();
+    }
+    </script>
+    
+</body>
+</html>
+   

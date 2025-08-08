@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            background-color: gold;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        div{
+            background-color: black;
+            height: 350px;
+            width: 350px;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            margin-top: 250px;
+            color: white;
+            align-content: center;
+        }
+        h1{
+            color: orange;
+            background-color: white;
+            text-align: center;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        #email{
+            width: 340px;
+            height: 35px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+        }
+        #password{
+            width: 340px;
+            height: 35px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+        }
+        button{
+            width: 340px;
+            height: 35px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: orange;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: burlywood;
+        }
+        .sign{
+            color: orange;
+            text-decoration: none;
+        }
+        p{
+            text-align: center;
+            color: white
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <form action="register" method="get">
+            <input type="text" placeholder="Enter Email Here" id="email" /> <br>
+            <input type="text" placeholder="Enter Password Here"  id="password"/><br>
+            <button> Login</button>
+            <p> Don't have an account? <a class="sign" href="./register.html"> Sign up </a> here </p>
+        </form>
+    </div>
+</body>
+</html>
